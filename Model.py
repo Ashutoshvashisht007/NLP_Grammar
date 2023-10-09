@@ -1,10 +1,10 @@
 from textblob import TextBlob
-from gingerit import GingerIt
+# from gingerit import GingerIt
 
 class SpellCheckerModule:
     def __init__(self):
         self.spell_check = TextBlob("")
-        self.grammar_check = GingerIt()
+        # self.grammar_check = GingerIt()
     def correct_spell(self,text):
         # Helo,World, subscribe, to my channel
         words = text.split()
@@ -27,6 +27,5 @@ class SpellCheckerModule:
 if __name__  == "__main__":
     obj = SpellCheckerModule()
     message = "Hello world. I like mashine learning. appple. bananana"
-    # print(obj.correct_spell(message))
-    # print(obj.correct_grammar(message))
-
+    print(obj.correct_spell(message))
+    print(obj.correct_grammar(message))
