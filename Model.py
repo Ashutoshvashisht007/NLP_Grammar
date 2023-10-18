@@ -5,7 +5,6 @@ class SpellCheckerModule:
         self.grammar_check = language_tool_python.LanguageTool('en-US')
     def correct_spell(self,text):
         matches = tool.check(text)
-        total_mistakes = len(matches)
         
         # Extract correct words and create a corrected sentence
         corrected_sentence = text
@@ -37,16 +36,4 @@ if __name__  == "__main__":
     obj = SpellCheckerModule()
     message = "Hello world. I like mashine learning. appple. bananana"
     print(obj.correct_spell(message))
-    # example_text = "This is an exampe sentence with somme grammatical errors."
-    # example_text = "I have went to the store yesterday."
-    # corrected_sentence, total_mistakes = check_grammar(example_text)
-
-    # print(f'Total Mistakes: {total_mistakes}')
-    # print(f'Corrected Sentence: {corrected_sentence}')
-
-    # text = 'I am trying to install gingerit in my VS Code but it\'s giving an error'
-    # matches = tool.check(text)
-
-    # print(matches)
-
-    # print(obj.correct_grammar(message))
+    

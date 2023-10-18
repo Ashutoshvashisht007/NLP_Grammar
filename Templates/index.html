@@ -56,8 +56,8 @@
 
         {% if corrected_text and total_mistakes and suggestions %}
           <h5>Corrected Word: <br> {{corrected_text}}</h5>
-          <h5>Corrected Word: <br> {{total_mistakes}}</h5>
-          <h5>Corrected Word: <br> {{suggestions}}</h5>
+          <h5>Total Mistakes: <br> {{total_mistakes}}</h5>
+          <h5>Some suggestions: <br> {{suggestions}}</h5>
           <!-- <h5>Grammar Mistakes: <br> {{corrected_grammar}}</h5> -->
         {% endif %}
     </div>
@@ -70,10 +70,12 @@
             </div>
             <button type="submit" class="btn btn-primary">Correct</button>
         </form>
-         {% if corrected_file_text  %}
-          <h5>Corrected Word: <br> {{corrected_file_text}}</h5>
-          <!-- <h5>Grammar Mistakes: <br> {{corrected_file_grammar}}</h5> -->
-        {% endif %}
+        {% if corrected_file_text and total_file_mistakes and file_suggestions %}
+        <h5>Corrected Word: <br> {{corrected_file_text}}</h5>
+          <h5>Total Mistakes: <br> {{total_file_mistakes}}</h5>
+          <h5>Some suggestions: <br> {{file_suggestions}}</h5>
+        <!-- <h5>Grammar Mistakes: <br> {{corrected_grammar}}</h5> -->
+      {% endif %}
     </div>
 
 
